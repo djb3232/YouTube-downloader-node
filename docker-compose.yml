@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: yt-downloader-app
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./downloads:/app/downloads
+    environment:
+      - FLASK_ENV=development
